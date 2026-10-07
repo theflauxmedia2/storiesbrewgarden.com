@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { RESERVEGO_URL } from "@/lib/site";
 
+const TITLE = "Gallery: Rooftop, Food & Craft Beer | Stories Brew Garden Yelahanka";
 const DESCRIPTION =
-  "A glimpse of the rooftop, the food, the crafted beers, the ambience and the celebrations at Stories Brew Garden, Yelahanka.";
+  "Photos of the rooftop, the food, the crafted beers, the ambience, the kids' play area and the private dining space at Stories Brew Garden, Yelahanka.";
 
 export const metadata: Metadata = {
-  title: "Gallery | Stories Brew Garden, Yelahanka",
+  title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/gallery" },
   openGraph: {
-    title: "Gallery | Stories Brew Garden, Yelahanka",
+    title: TITLE,
     description: DESCRIPTION,
     url: "/gallery",
   },
@@ -19,37 +20,37 @@ const SETS = [
   {
     label: "Rooftop",
     src: "/photos/rooftop-city-view.webp",
-    alt: "Rooftop seating along the edge with the skyline behind",
+    alt: "Rooftop seating at Stories Brew Garden, Yelahanka, with the North Bengaluru skyline behind",
   },
   {
     label: "Date Nights",
     src: "/photos/rooftop-dusk-sky.webp",
-    alt: "A table on the rooftop against a dusk sky",
+    alt: "A rooftop table for a date night against a dusk sky",
   },
   {
     label: "Food",
     src: "/photos/rooftop-dining-wide.webp",
-    alt: "Rooftop dining tables set under the pitched roof",
+    alt: "Rooftop dining tables at Stories Brew Garden",
   },
   {
     label: "Crafted Beers",
     src: "/photos/bar-counter.webp",
-    alt: "The bar counter with seating",
+    alt: "The craft beer bar counter with seating",
   },
   {
     label: "Drinks",
     src: "/photos/bar-interior.webp",
-    alt: "The bar area with pendant lighting",
+    alt: "The cocktail bar area with pendant lighting",
   },
   {
     label: "Ambience",
     src: "/photos/ambience-lights.webp",
-    alt: "Woven pendant lights over a mural",
+    alt: "Woven pendant lights over a mural in the restaurant",
   },
   {
     label: "Events",
     src: "/photos/private-dining.webp",
-    alt: "The private dining room set for a group",
+    alt: "The private dining room, used for parties and corporate dinners",
   },
   {
     label: "Celebrations",
@@ -69,12 +70,12 @@ export default function GalleryPage() {
       <div className="hero">
         <div className="sun" aria-hidden="true" />
         <div className="wrap">
-          <p className="eyebrow rise">Gallery</p>
-          <h1 className="rise">
+          <h1 className="eyebrow rise">Gallery: Stories Brew Garden, Yelahanka</h1>
+          <p className="display rise">
             A Glimpse
             <br />
             of Stories
-          </h1>
+          </p>
           <p className="lede rise">
             Get a glimpse of the experience before you arrive.
           </p>

@@ -15,8 +15,16 @@ import {
 
 const FAQS: { q: string; a: string }[] = [
   {
-    q: "Do You Take Reservations?",
-    a: "Yes. You can book a table through our booking system at any time, and larger groups are best arranged with the outlet team directly.",
+    q: "How Do I Book a Table?",
+    a: "Book online at any time through the Book a Table button, or call 080 4026 5613. Lunch and dinner reservations are both taken, and larger groups are best arranged with the outlet team directly.",
+  },
+  {
+    q: "Are You Open for Lunch on Weekends?",
+    a: "Yes. Stories Brew Garden is open every day from 12 noon to 1 am, including Saturday and Sunday lunch. Weekend tables fill up, so booking ahead helps.",
+  },
+  {
+    q: "What Is the Contact Number?",
+    a: "Call 080 4026 5613 for reservations and enquiries, or message +91 91879 20636 on WhatsApp.",
   },
   {
     q: "Is the Rooftop Pet-Friendly?",
@@ -28,7 +36,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can I Book the Space for a Celebration?",
-    a: "Yes. There are private dining and banquet spaces for intimate gatherings, and arrangements for larger group celebrations.",
+    a: "Yes. There are private dining and banquet spaces for birthdays, anniversaries and intimate gatherings, and arrangements for larger groups, corporate parties and team outings.",
   },
   {
     q: "Do You Have Live Music?",
@@ -36,7 +44,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Where Exactly Are You?",
-    a: "4th Floor, Chandre Gowda Arcade, next to Vajram Tiara Road, Avalahalli, Yelahanka, Bengaluru 560119.",
+    a: "4th Floor, Chandre Gowda Arcade, next to Vajram Tiara Road, Avalahalli, Yelahanka, North Bengaluru 560119.",
   },
 ];
 
@@ -50,15 +58,16 @@ const faqJsonLd = {
   })),
 };
 
+const TITLE = "Book a Table in Yelahanka | Contact Stories Brew Garden";
 const DESCRIPTION =
-  "Find Stories Brew Garden in Yelahanka, Bengaluru. Book a table, check opening hours, or speak to the team about a celebration.";
+  "Book a table at Stories Brew Garden, Avalahalli, Yelahanka: lunch and dinner reservations, location and directions, contact number 080 4026 5613 and opening hours.";
 
 export const metadata: Metadata = {
-  title: "Contact & Book a Table | Stories Brew Garden, Yelahanka",
+  title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact & Book a Table | Stories Brew Garden, Yelahanka",
+    title: TITLE,
     description: DESCRIPTION,
     url: "/contact",
   },
@@ -70,12 +79,12 @@ export default function ContactPage() {
       <div className="hero">
         <div className="sun" aria-hidden="true" />
         <div className="wrap">
-          <p className="eyebrow rise">Contact Us</p>
-          <h1 className="rise">
+          <h1 className="eyebrow rise">Contact Us &amp; Book a Table in Yelahanka</h1>
+          <p className="display rise">
             Come Find
             <br />
             Your Story
-          </h1>
+          </p>
           <p className="lede rise">
             Whether you&apos;re planning a rooftop evening, a date, a celebration,
             a family outing or simply looking for your next place to unwind,
@@ -93,7 +102,7 @@ export default function ContactPage() {
         <div className="wrap">
           <div className="two">
             <div>
-              <p className="eyebrow">Stories Brew Garden</p>
+              <p className="eyebrow">Stories Brew Garden Location</p>
               <h2>Where to Find Us</h2>
               <dl className="facts">
                 <div>
@@ -161,7 +170,7 @@ export default function ContactPage() {
                 height={510}
                 loading="lazy"
                 decoding="async"
-                alt="The rooftop courtyard with cabana seating and planters, lit at night"
+                alt="The rooftop courtyard at Stories Brew Garden, Avalahalli, Yelahanka, lit at night"
               />
             </div>
           </div>
@@ -172,14 +181,15 @@ export default function ContactPage() {
         <div className="wrap">
           <div className="two">
             <div>
-              <p className="eyebrow">Book a Table</p>
+              <p className="eyebrow">Table Booking</p>
               <h2>
                 Ready to Reserve
                 <br />
                 Your Table?
               </h2>
               <p className="lede">
-                Choose your preferred date, time and number of guests, and
+                Lunch or dinner, a weekend family table or a rooftop table for
+                two: choose your preferred date, time and number of guests, and
                 we&apos;ll save you a place for your next story.
               </p>
               <div className="btn-row">

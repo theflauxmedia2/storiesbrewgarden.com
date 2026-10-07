@@ -17,9 +17,12 @@ const data = {
   "@type": ["Restaurant", "BarOrPub"],
   "@id": `${SITE_URL}/#business`,
   name: "Stories Brew Garden",
-  alternateName: "Stories Brew Garden, Yelahanka",
+  alternateName: [
+    "Stories Brew Garden, Yelahanka",
+    "Stories Brew Garden Bengaluru",
+  ],
   description:
-    "A rooftop brew garden in Yelahanka, North Bengaluru, with crafted beers, a globally inspired kitchen, signature cocktails and open-air rooftop seating, plus a kids' play area and pet-friendly spaces.",
+    "A rooftop restaurant, bar and brew garden in Avalahalli, Yelahanka, North Bengaluru, with crafted beers, a multicuisine kitchen, signature cocktails and open-air rooftop seating, plus a kids' play area, pet-friendly spaces, live music and private dining for parties and corporate events.",
   slogan: "Come for the Flavours. Discover Your Pour. Stay for the Story.",
   url: SITE_URL,
   image: [
@@ -31,7 +34,7 @@ const data = {
   telephone: PHONE_TEL,
   currenciesAccepted: "INR",
   paymentAccepted: "Cash, Credit Card, Debit Card, UPI",
-  areaServed: ["Yelahanka", "Bengaluru"],
+  areaServed: ["Avalahalli", "Yelahanka", "North Bengaluru", "Bengaluru"],
   isAccessibleForFree: true,
   publicAccess: true,
   parentOrganization: {
@@ -82,7 +85,28 @@ const data = {
       closes: "01:00",
     },
   ],
-  servesCuisine: ["Global", "Indian", "Asian", "Continental"],
+  servesCuisine: [
+    "Global",
+    "North Indian",
+    "Indian",
+    "Asian",
+    "Continental",
+    "Desserts",
+  ],
+  // Only amenities stated on the site. Rooftop capacity / covered seating are
+  // still unconfirmed, so they are not listed.
+  amenityFeature: [
+    "Rooftop",
+    "Outdoor seating",
+    "Kids' play area",
+    "Pet friendly",
+    "Live music",
+    "Private dining room",
+  ].map((name) => ({
+    "@type": "LocationFeatureSpecification",
+    name,
+    value: true,
+  })),
   menu: `${SITE_URL}/food-and-drinks/`,
   hasMenu: {
     "@type": "Menu",

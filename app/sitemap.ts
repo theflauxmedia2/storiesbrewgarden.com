@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 
 // Bump this when page content actually changes. A fresh timestamp on every
 // build makes lastmod meaningless to crawlers.
-const UPDATED = new Date("2026-09-26");
+const UPDATED = new Date("2026-10-07");
 
 const ROUTES: { path: string; priority: number; image: string }[] = [
   { path: "/", priority: 1, image: "/photos/rooftop-dining-evening.webp" },

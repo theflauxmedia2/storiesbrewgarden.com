@@ -2,17 +2,39 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HoursStrip } from "@/components/hours-strip";
 import { PourList } from "@/components/pour-list";
+import { Faq, type FaqItem } from "@/components/faq";
 import { RESERVEGO_URL } from "@/lib/site";
 
+const TITLE =
+  "Stories Brew Garden | Rooftop Restaurant & Bar in Yelahanka, Bengaluru";
 const DESCRIPTION =
-  "Rooftop brew garden in Yelahanka, Bengaluru, with crafted beers, a global kitchen, signature cocktails, open-air dining, a kids' play area and pet-friendly spaces.";
+  "Rooftop restaurant, bar and brew garden in Yelahanka, North Bengaluru, with craft beer, multicuisine food, cocktails, open-air dining, a kids' play area and pet-friendly seating.";
+
+const FAQS: FaqItem[] = [
+  {
+    q: "Where Is Stories Brew Garden in Yelahanka?",
+    a: "On the 4th floor of Chandre Gowda Arcade, next to Vajram Tiara Road, Avalahalli, Yelahanka, in North Bengaluru (560119). It is a rooftop restaurant and bar, open every day from 12 noon to 1 am.",
+  },
+  {
+    q: "What Kind of Restaurant Is Stories Brew Garden?",
+    a: "A rooftop brew garden: an open-air bar and multicuisine restaurant with eight crafted beers and ciders, signature cocktails, and a kitchen that covers North Indian, regional Indian, Asian, continental and global food.",
+  },
+  {
+    q: "Is It a Good Family Restaurant?",
+    a: "Yes. There is a dedicated kids' play area, pet-friendly seating and a menu built for sharing, which makes it an easy pick for family lunches, weekend dinners and get-togethers with friends.",
+  },
+  {
+    q: "Can I Celebrate a Birthday or Host a Corporate Party Here?",
+    a: "Yes. There is a private dining space for smaller groups and room on the rooftop for larger parties, from birthdays and anniversaries to team lunches, team outings and office celebrations.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: "Stories Brew Garden | Rooftop Brew Garden in Yelahanka, Bengaluru",
+  title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Stories Brew Garden | Rooftop Brew Garden in Yelahanka, Bengaluru",
+    title: TITLE,
     description: DESCRIPTION,
     url: "/",
   },
@@ -25,18 +47,20 @@ export default function HomePage() {
         <div className="sun" aria-hidden="true" />
         <div className="wrap hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow rise">Yelahanka, Your Story Has Arrived</p>
-            <h1 className="rise">
+            <h1 className="eyebrow rise">
+              Rooftop Restaurant &amp; Bar in Yelahanka, Bengaluru
+            </h1>
+            <p className="display rise">
               Crafted Beers.
               <br />
               Global Flavours.
               <br />
               Rooftop Stories.
-            </h1>
+            </p>
             <p className="lede rise">
               Stories finally arrives in Yelahanka, bringing crafted pours, a
-              globally inspired kitchen, open-air rooftop dining and an
-              atmosphere made for everything from sundowners to celebrations.
+              globally inspired multicuisine kitchen, open-air rooftop dining and
+              an atmosphere made for everything from sundowners to celebrations.
             </p>
             <div className="btn-row rise">
               <a
@@ -59,7 +83,7 @@ export default function HomePage() {
               height={453}
               fetchPriority="high"
               decoding="async"
-              alt="Rooftop dining tables under the pitched wooden roof, lit for the evening"
+              alt="Rooftop dining tables at Stories Brew Garden, Yelahanka, lit for the evening"
             />
           </div>
         </div>
@@ -89,11 +113,11 @@ export default function HomePage() {
                 with experiences across Bengaluru, Chennai and Dubai.
               </p>
               <p>
-                Now the next chapter begins in Yelahanka. Stories Brew Garden
-                brings the Stories philosophy to North Bengaluru in a new form: a
-                rooftop brew garden built around signature crafted beers, global
-                cuisine, curated cocktails, open skies, music and moments meant
-                to be shared.
+                Now the next chapter begins in Avalahalli, Yelahanka. Stories
+                Brew Garden brings the Stories philosophy to North Bengaluru in a
+                new form: a rooftop brew garden, bar and restaurant built around
+                signature crafted beers, global cuisine, curated cocktails, open
+                skies, live music and moments meant to be shared.
               </p>
               <div className="btn-row">
                 <Link className="btn line" href="/our-story">
@@ -125,14 +149,15 @@ export default function HomePage() {
             and an atmosphere that changes beautifully from day to night.
           </p>
           <p>
-            Whether it&apos;s a family lunch, a catch-up with friends, an
-            after-work gathering, a celebration or simply a reason to get out,
-            Stories Brew Garden gives you the space to settle in and enjoy. When
-            the sun begins to set, the rooftop becomes one of Yelahanka&apos;s
-            perfect settings for date nights, sundowners and conversations that
-            deserve a little more time. With a dedicated kids&apos; play area and
-            a private celebration space for small gatherings, there&apos;s
-            something for every age and every occasion.
+            Whether it&apos;s a family lunch, a weekend dinner, a catch-up with
+            friends, an after-work team dinner, a celebration or simply a reason
+            to get out, Stories Brew Garden gives you the space to settle in and
+            enjoy. When the sun begins to set, the rooftop becomes one of
+            Yelahanka&apos;s perfect settings for date nights, sundowners and
+            conversations that deserve a little more time. With a dedicated
+            kids&apos; play area, pet-friendly seating and a private celebration
+            space for small gatherings, there&apos;s something for every age and
+            every occasion.
           </p>
         </div>
       </section>
@@ -158,12 +183,13 @@ export default function HomePage() {
         <div className="wrap">
           <div className="two">
             <div>
-              <p className="eyebrow">Brewed to Be Shared</p>
+              <p className="eyebrow">Craft Beer in Yelahanka</p>
               <h2>Find Your Pour</h2>
               <p className="lede">
-                Eight crafted beers with distinct styles and refreshing profiles,
-                made to pair effortlessly with the table. Good beer deserves good
-                food and good company.
+                Eight crafted beers and ciders, from a hoppy Wheat IPA and a
+                classic Hefeweizen to a crisp Kölsch and Belgian witbier, made to
+                pair effortlessly with the table. Good beer deserves good food and
+                good company.
               </p>
             </div>
             <div className="shot tall">
@@ -173,7 +199,7 @@ export default function HomePage() {
                 height={453}
                 loading="lazy"
                 decoding="async"
-                alt="The bar counter at Stories Brew Garden, with seating and shelves behind"
+                alt="The craft beer bar counter at Stories Brew Garden, Yelahanka"
               />
             </div>
           </div>
@@ -198,8 +224,8 @@ export default function HomePage() {
             <li>
               <h3>A Kitchen That Travels</h3>
               <p>
-                From Indian and regional favourites to Asian plates, continental
-                comfort food and dishes designed for sharing.
+                From North Indian classics and regional Indian favourites to Asian
+                plates, continental comfort food and dishes designed for sharing.
               </p>
             </li>
             <li>
@@ -217,32 +243,32 @@ export default function HomePage() {
               </p>
             </li>
             <li>
-              <h3>Entertainment</h3>
+              <h3>Live Music &amp; Late Nights</h3>
               <p>
-                Music and lively experiences, for when you want the night to come
-                alive.
+                Live music, acoustic evenings and lively nights on the roof, open
+                until 1 am, for when you want the night to come alive.
               </p>
             </li>
             <li>
               <h3>Room for the Occasion</h3>
               <p>
-                A welcoming destination for family lunches, birthdays,
-                anniversaries, corporate gatherings, team outings and larger
-                celebrations.
+                A welcoming destination for family lunches, birthday parties,
+                anniversary dinners, corporate parties, team outings and larger
+                group celebrations.
               </p>
             </li>
             <li>
               <h3>Pet-Friendly</h3>
               <p>
-                Pet-friendly spaces, for plans that include your four-legged
-                companion.
+                A pet-friendly restaurant in Yelahanka, for plans that include
+                your four-legged companion.
               </p>
             </li>
             <li>
-              <h3>A Dedicated Kids&apos; Play Space</h3>
+              <h3>A Dedicated Kids&apos; Play Area</h3>
               <p>
-                So family outings have something for everyone, not just the
-                adults.
+                A family restaurant with its own kids&apos; play area, so outings
+                have something for everyone, not just the adults.
               </p>
             </li>
           </ul>
@@ -265,8 +291,8 @@ export default function HomePage() {
                 little longer.
               </p>
               <p>
-                Explore global cuisine alongside regional favourites, Indian
-                classics, Asian-inspired plates, continental comfort food,
+                Explore global cuisine alongside North Indian classics, regional
+                Indian favourites, Asian-inspired plates, continental comfort food,
                 sharing plates, hearty mains and indulgent desserts. Pair your
                 food with popular home-brewed craft beers from the collection of
                 Stories Brewery &amp; Kitchen in BTM, Bengaluru, Stories
@@ -285,7 +311,7 @@ export default function HomePage() {
                 height={453}
                 loading="lazy"
                 decoding="async"
-                alt="A cluster of woven pendant lights over a mural, with bougainvillea"
+                alt="Woven pendant lights over a mural and bougainvillea in the restaurant at Stories Brew Garden"
               />
             </div>
           </div>
@@ -296,7 +322,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="two">
             <div>
-              <p className="eyebrow">Every Visit Tells a Story</p>
+              <p className="eyebrow">Date Nights in Yelahanka</p>
               <h2>
                 Table for Two,
                 <br />
@@ -328,9 +354,26 @@ export default function HomePage() {
                 height={510}
                 loading="lazy"
                 decoding="async"
-                alt="The open rooftop under a deep dusk sky"
+                alt="The open-air rooftop at Stories Brew Garden under a deep dusk sky"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="band-paper">
+        <div className="wrap">
+          <p className="eyebrow">Good to Know</p>
+          <h2>
+            Stories Brew Garden,
+            <br />
+            Yelahanka
+          </h2>
+          <Faq items={FAQS} />
+          <div className="btn-row">
+            <Link className="btn line" href="/contact">
+              Location, Hours &amp; Table Booking
+            </Link>
           </div>
         </div>
       </section>
@@ -343,8 +386,8 @@ export default function HomePage() {
             Skies Above You. Your Favourite People Beside You.
           </h2>
           <p className="lede" style={{ marginTop: "24px" }}>
-            And Yelahanka&apos;s newest rooftop, waiting to become part of your
-            story. Stories Brew Garden, Yelahanka.
+            And Yelahanka&apos;s newest rooftop restaurant, waiting to become
+            part of your story. Stories Brew Garden, Yelahanka.
           </p>
           <div className="btn-row">
             <a className="btn" href={RESERVEGO_URL} target="_blank" rel="noopener">

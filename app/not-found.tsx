@@ -21,7 +21,7 @@ export default function NotFound() {
         <div className="sun" aria-hidden="true" />
         <div className="wrap">
           <p className="eyebrow rise">404, Page Not Found</p>
-          <h1 className="rise">
+          <h1 className="display rise">
             This Page
             <br />
             Wandered Off

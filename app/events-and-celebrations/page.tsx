@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { WhatsAppForm } from "@/components/whatsapp-form";
+import { Faq, type FaqItem } from "@/components/faq";
 import {
   INSTAGRAM_URL,
   PHONE_DISPLAY,
@@ -8,15 +9,41 @@ import {
   WHATSAPP_URL,
 } from "@/lib/site";
 
+const TITLE = "Birthday & Corporate Party Venue in Yelahanka | Stories Brew Garden";
 const DESCRIPTION =
-  "Live music, acoustic evenings and sports screenings, plus private dining, banquet spaces and celebration packages for birthdays, anniversaries and corporate gatherings.";
+  "Rooftop party venue in Yelahanka for birthdays, anniversaries, corporate parties, team outings and private dining, with live music and sports screenings.";
+
+// Capacities and package pricing are still pending from the client, so no
+// answer here quotes numbers.
+const FAQS: FaqItem[] = [
+  {
+    q: "Can I Host a Birthday Party at Stories Brew Garden?",
+    a: "Yes. Birthday dinners, rooftop birthday parties and family celebrations can be planned in the private dining space or on the rooftop, with celebration packages built around your group.",
+  },
+  {
+    q: "Do You Have a Private Dining Space?",
+    a: "Yes. There is a private dining room for intimate gatherings and small parties, and arrangements on the rooftop for larger groups.",
+  },
+  {
+    q: "Can We Book a Corporate Team Lunch or Dinner?",
+    a: "Yes. Team lunches, team dinners, office parties and team outings are planned with the outlet team. Send a corporate enquiry with your date and group size.",
+  },
+  {
+    q: "Is It Suitable for Family Celebrations With Kids?",
+    a: "Yes. The dedicated kids' play area gives children their own space during birthdays, anniversaries and family get-togethers.",
+  },
+  {
+    q: "Do You Have Live Music?",
+    a: "Yes. Live music, acoustic evenings, jamming sessions and sports screenings run on the rooftop. Follow @storiesbrewgarden.yelahanka on Instagram for what is coming up.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: "Events & Celebrations | Stories Brew Garden, Yelahanka",
+  title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/events-and-celebrations" },
   openGraph: {
-    title: "Events & Celebrations | Stories Brew Garden, Yelahanka",
+    title: TITLE,
     description: DESCRIPTION,
     url: "/events-and-celebrations",
   },
@@ -28,23 +55,26 @@ export default function EventsAndCelebrationsPage() {
       <div className="hero">
         <div className="sun" aria-hidden="true" />
         <div className="wrap">
-          <p className="eyebrow rise">Events &amp; Celebrations</p>
-          <h1 className="rise">
+          <h1 className="eyebrow rise">
+            Events &amp; Celebrations: Party Venue in Yelahanka
+          </h1>
+          <p className="display rise">
             There&apos;s Always
             <br />
             Another Story
-          </h1>
+          </p>
           <p className="lede rise">
             Stories Brew Garden brings together food, drinks and entertainment
             with a calendar of experiences designed to give you another reason to
-            visit.
+            visit, and a rooftop event venue for birthdays, anniversaries,
+            corporate parties and team outings.
           </p>
         </div>
       </div>
 
       <section>
         <div className="wrap">
-          <p className="eyebrow">Events &amp; Experiences</p>
+          <p className="eyebrow">Live Music in Yelahanka</p>
           <h2>Live on the Roof</h2>
           <ul className="reasons">
             <li>
@@ -89,11 +119,67 @@ export default function EventsAndCelebrationsPage() {
         </div>
       </section>
 
+      <section id="corporate">
+        <div className="wrap">
+          <p className="eyebrow">Corporate Events &amp; Team Outings</p>
+          <h2>
+            Corporate Parties &amp; Team
+            <br />
+            Outings in Yelahanka
+          </h2>
+          <p className="lede">
+            For companies across Yelahanka and North Bengaluru, a rooftop that
+            feels nothing like the office: food, drinks and open sky for the
+            whole team.
+          </p>
+          <p>
+            Whether it&apos;s a team lunch, a team dinner, an office party or a
+            full company celebration, our team plans the space, the menu and the
+            pours around your group size and schedule. Smaller teams can take the
+            private dining room; larger groups can gather on the rooftop.
+          </p>
+          <ul className="reasons">
+            <li>
+              <h3>Team Lunches</h3>
+              <p>A midday break that the whole team actually looks forward to.</p>
+            </li>
+            <li>
+              <h3>Team Dinners</h3>
+              <p>Dinner under the sky to close a quarter, a launch or a long week.</p>
+            </li>
+            <li>
+              <h3>Office Parties</h3>
+              <p>Annual parties, festive celebrations and milestones, on the roof.</p>
+            </li>
+            <li>
+              <h3>Team Outings</h3>
+              <p>A relaxed offsite with crafted beers, global food and room to talk.</p>
+            </li>
+            <li>
+              <h3>Client &amp; Networking Evenings</h3>
+              <p>Informal evenings that leave a better impression than a meeting room.</p>
+            </li>
+            <li>
+              <h3>Farewells &amp; Welcomes</h3>
+              <p>The send-offs and first days worth marking together.</p>
+            </li>
+          </ul>
+          <div className="btn-row">
+            <a className="btn" href="#enquiry">
+              Send a Corporate Enquiry
+            </a>
+            <a className="btn line" href={`tel:${PHONE_TEL}`}>
+              {`Call ${PHONE_DISPLAY}`}
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="band-dark dark" id="celebrations">
         <div className="wrap">
           <div className="two">
             <div>
-              <p className="eyebrow">Celebrations &amp; Party Packages</p>
+              <p className="eyebrow">Birthday &amp; Anniversary Celebrations</p>
               <h2>
                 Your People.
                 <br />
@@ -102,9 +188,10 @@ export default function EventsAndCelebrationsPage() {
                 Your Story.
               </h2>
               <p className="lede">
-                Birthdays, anniversaries, reunions and milestone moments deserve
-                more than an ordinary table. Explore celebration and party
-                packages designed around your group, occasion and requirements.
+                Birthday parties, anniversary dinners, reunions, family
+                get-togethers and milestone moments deserve more than an ordinary
+                table. Explore celebration and party packages designed around your
+                group, occasion and requirements.
               </p>
               <p>
                 Stories Brew Garden offers flexible spaces designed to make every
@@ -128,13 +215,15 @@ export default function EventsAndCelebrationsPage() {
                 height={453}
                 loading="lazy"
                 decoding="async"
-                alt="The private dining room with a long table and painted arched niches"
+                alt="The private dining room for parties and celebrations at Stories Brew Garden, Yelahanka"
               />
             </div>
           </div>
 
           <div style={{ marginTop: "52px" }} id="enquiry">
-            <h3 style={{ fontSize: "24px" }}>Tell Us What You&apos;re Celebrating</h3>
+            <h3 style={{ fontSize: "24px" }}>
+              Tell Us What You&apos;re Celebrating or Planning
+            </h3>
             <p className="lede" style={{ marginTop: "14px", marginBottom: "8px" }}>
               Fill in a few details and we&apos;ll pick it up on WhatsApp:
               packages, availability and arrangements, planned around your group.
@@ -165,6 +254,18 @@ export default function EventsAndCelebrationsPage() {
             </p>
             {/* TODO: real capacities, package tiers and price ranges once confirmed. */}
           </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <p className="eyebrow">Before You Plan</p>
+          <h2>
+            Parties &amp; Events,
+            <br />
+            Answered
+          </h2>
+          <Faq items={FAQS} />
         </div>
       </section>
     </main>

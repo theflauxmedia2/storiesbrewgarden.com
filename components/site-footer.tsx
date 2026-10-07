@@ -31,8 +31,8 @@ export function SiteFooter() {
               />
             </Link>
             <p>
-              A rooftop brew garden in North Bengaluru, from the house of
-              Stories: Stories Brewery &amp; Kitchen, Stories Bar &amp; Kitchen,
+              A rooftop restaurant, bar and brew garden in Yelahanka, North
+              Bengaluru, from the house of Stories: Stories Brewery &amp; Kitchen, Stories Bar &amp; Kitchen,
               Macaw by Stories, MOAI, Fernway by Stories and Stories Lounge.
             </p>
             <p className="foot-call">
@@ -83,6 +83,11 @@ export function SiteFooter() {
                   Plan a Celebration
                 </Link>
               </li>
+              <li>
+                <Link href="/events-and-celebrations#corporate">
+                  Corporate Events
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -95,7 +100,13 @@ export function SiteFooter() {
                 <Link href="/crafted-beers">Crafted Beers</Link>
               </li>
               <li>
-                <Link href="/rooftop-experience">The Rooftop</Link>
+                <Link href="/rooftop-experience">Rooftop Dining</Link>
+              </li>
+              <li>
+                <Link href="/events-and-celebrations">Events &amp; Parties</Link>
+              </li>
+              <li>
+                <Link href="/gallery">Gallery</Link>
               </li>
               <li>
                 <Link href="/our-story">Our Story</Link>
@@ -104,7 +115,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="foot-btm">
-          <span>Stories Brew Garden, Bengaluru</span>
+          <span>Stories Brew Garden, Yelahanka, Bengaluru</span>
           <span>
             Come for the Flavours. Discover Your Pour. Stay for the Story.
           </span>
