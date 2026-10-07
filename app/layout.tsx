@@ -13,9 +13,9 @@ import { SITE_URL } from "@/lib/site";
 import "./styles.css";
 
 const TITLE =
-  "Stories Brew Garden | Rooftop Brew Garden in Yelahanka, Bengaluru";
+  "Stories Brew Garden | Rooftop Restaurant & Bar in Yelahanka, Bengaluru";
 const DESCRIPTION =
-  "Rooftop brew garden in Yelahanka, Bengaluru, with crafted beers, a global kitchen, signature cocktails, open-air dining, a kids' play area and pet-friendly spaces.";
+  "Rooftop restaurant, bar and brew garden in Yelahanka, North Bengaluru, with craft beer, multicuisine food, cocktails, open-air dining, a kids' play area and pet-friendly seating.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -26,15 +26,20 @@ export const metadata: Metadata = {
   creator: "Stories Brew Garden",
   publisher: "Stories Brew Garden",
   category: "restaurant",
+  // Google ignores this tag; kept short as a record of the site's head terms.
   keywords: [
     "Stories Brew Garden",
-    "rooftop brew garden Yelahanka",
-    "craft beer Bengaluru",
-    "brewpub Bengaluru",
-    "rooftop restaurant Yelahanka",
-    "rooftop bar North Bengaluru",
-    "sundowners Yelahanka",
-    "date night rooftop Bengaluru",
+    "Stories Brew Garden Yelahanka",
+    "restaurants in Yelahanka",
+    "rooftop restaurant in Yelahanka",
+    "rooftop bar in Yelahanka",
+    "brew garden in Yelahanka",
+    "craft beer in Yelahanka",
+    "family restaurant in Yelahanka",
+    "party venue in Yelahanka",
+    "corporate party venue in Yelahanka",
+    "restaurants in North Bengaluru",
+    "rooftop restaurants in North Bangalore",
   ],
   alternates: { canonical: "/" },
   robots: {

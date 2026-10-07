@@ -70,12 +70,12 @@ a{color:var(--ember)}
 }
 /* Tracking and leading are size-specific (apple-design §15): large display type
    gets tighter tracking and tighter leading; body sits near zero and looser. */
-h1,h2,.h{
+h1,h2,.h,.display{
   font-family:var(--font-display),"Fraunces","Iowan Old Style",Georgia,serif;
   font-optical-sizing:auto;font-variation-settings:"SOFT" 40,"WONK" 1;
   font-weight:600;letter-spacing:-.022em;line-height:1.04;margin:0;text-wrap:balance;
 }
-h1{font-size:clamp(2.6rem,7vw,5.5rem);font-weight:500;line-height:.96;letter-spacing:-.035em}
+h1,.display{font-size:clamp(2.6rem,7vw,5.5rem);font-weight:500;line-height:.96;letter-spacing:-.035em}
 h2{font-size:clamp(1.9rem,4vw,3.15rem);letter-spacing:-.026em;line-height:1.06}
 h3{
   font-family:var(--font-display),"Fraunces",Georgia,serif;font-optical-sizing:auto;
@@ -87,6 +87,12 @@ p{margin:.9rem 0 0;max-width:var(--read)}
 .eyebrow{
   font-size:.82rem;font-weight:600;letter-spacing:.005em;
   color:var(--crimson);margin:0 0 .9rem;
+}
+/* Page heroes carry the keyword <h1> as the small eyebrow label; the big line
+   underneath is a .display paragraph. Undo the h1 type styles on the eyebrow. */
+h1.eyebrow{
+  font-family:inherit;font-variation-settings:normal;line-height:inherit;
+  text-wrap:wrap;
 }
 .dark .eyebrow,.evening .eyebrow{color:var(--moss)}
 .dark p,.evening p{color:#DAD5C0}
@@ -188,14 +194,14 @@ main section{padding:clamp(60px,8.5vw,108px) 0}
 
 /* ── hero ───────────────────────────────────────────────────── */
 .hero{padding:clamp(52px,8vw,96px) 0 0;position:relative;overflow:hidden}
-.hero h1{max-width:13ch}
+.hero .display{max-width:13ch}
 .hero .lede{margin-top:clamp(20px,3vw,28px)}
 .hero .btn-row{margin-top:clamp(26px,3.5vw,34px)}
 
 /* home hero — copy left, photo right */
 .hero--home{padding-bottom:clamp(40px,6vw,72px)}
 .hero-grid{display:grid;gap:clamp(28px,4vw,56px);align-items:center}
-.hero-grid .hero-copy h1{max-width:none}
+.hero-grid .hero-copy .display{max-width:none}
 .hero-media{
   position:relative;border-radius:14px;overflow:hidden;
   aspect-ratio:5/4;box-shadow:0 30px 60px -30px rgba(36,31,26,.5);

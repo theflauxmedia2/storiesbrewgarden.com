@@ -1,15 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Faq, type FaqItem } from "@/components/faq";
+import { RESERVEGO_URL } from "@/lib/site";
 
+const TITLE = "Multicuisine Restaurant in Yelahanka | Stories Brew Garden Menu";
 const DESCRIPTION =
-  "A global kitchen moving between Indian classics, Asian plates and continental comfort food, with crafted beers, signature cocktails, mocktails and refreshers.";
+  "The Stories Brew Garden menu: North Indian, regional Indian, Asian, continental and global food, desserts, signature cocktails, mocktails and craft beer in Yelahanka.";
+
+const FAQS: FaqItem[] = [
+  {
+    q: "What Cuisines Does Stories Brew Garden Serve?",
+    a: "A multicuisine menu: North Indian classics, regional Indian favourites, Asian plates, continental comfort food and global dishes, with sharing plates, hearty mains and desserts.",
+  },
+  {
+    q: "Is It a Good Place for Lunch in Yelahanka?",
+    a: "Yes. The kitchen opens at 12 noon every day, so it works for a quick lunch, a long weekend lunch or a Sunday lunch with the family on the rooftop.",
+  },
+  {
+    q: "How Late Can I Come for Dinner?",
+    a: "Stories Brew Garden is open until 1 am every day, so a late dinner in Yelahanka can run as long as the conversation does.",
+  },
+  {
+    q: "Do You Serve Cocktails and Mocktails?",
+    a: "Yes. Stories Signature Cocktails, classic cocktails and spirits sit alongside mocktails and refreshers, plus eight crafted beers and ciders.",
+  },
+];
 
 export const metadata: Metadata = {
-  title: "Food & Drinks | Stories Brew Garden, Yelahanka",
+  title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/food-and-drinks" },
   openGraph: {
-    title: "Food & Drinks | Stories Brew Garden, Yelahanka",
+    title: TITLE,
     description: DESCRIPTION,
     url: "/food-and-drinks",
   },
@@ -21,17 +43,19 @@ export default function FoodAndDrinksPage() {
       <div className="hero">
         <div className="sun" aria-hidden="true" />
         <div className="wrap">
-          <p className="eyebrow rise">Food &amp; Drinks</p>
-          <h1 className="rise">
+          <h1 className="eyebrow rise">
+            Food &amp; Drinks: Multicuisine Restaurant in Yelahanka
+          </h1>
+          <p className="display rise">
             Global Kitchen,
             <br />
             Local Soul
-          </h1>
+          </p>
           <p className="lede rise">
             Travel across flavours without leaving your table. The kitchen moves
-            between global favourites, Indian classics, Asian inspirations and
-            regional specialities: familiar comfort and unexpected discoveries on
-            one menu.
+            between global favourites, North Indian classics, Asian inspirations
+            and regional Indian specialities: familiar comfort and unexpected
+            discoveries on one menu.
           </p>
         </div>
       </div>
@@ -50,12 +74,17 @@ export default function FoodAndDrinksPage() {
             longer.
           </p>
           <p>
-            Explore global cuisine alongside regional favourites, Indian
-            classics, Asian-inspired plates, continental comfort food, sharing
-            plates, hearty mains and indulgent desserts. Pair your food with
+            Explore global cuisine alongside regional Indian favourites, North
+            Indian classics, Asian-inspired plates, continental comfort food,
+            sharing plates, hearty mains and indulgent desserts. Pair your food with
             popular home-brewed craft beers from the collection of Stories
             Brewery &amp; Kitchen in BTM, Bengaluru, Stories Signature Cocktails,
             spirits, mocktails and refreshing beverages.
+          </p>
+          <p>
+            Open from 12 noon to 1 am every day, it is an easy pick for lunch in
+            Yelahanka, a long Sunday lunch with the family, a group dinner with
+            friends or a late dinner under the open sky.
           </p>
           <div style={{ marginTop: "26px" }}>
             <span className="tbc">
@@ -71,7 +100,7 @@ export default function FoodAndDrinksPage() {
                 height={453}
                 loading="lazy"
                 decoding="async"
-                alt="Rooftop dining tables set under the pitched roof"
+                alt="Rooftop dining tables at Stories Brew Garden, a multicuisine restaurant in Yelahanka"
               />
             </div>
             <div className="shot wide">
@@ -81,7 +110,7 @@ export default function FoodAndDrinksPage() {
                 height={453}
                 loading="lazy"
                 decoding="async"
-                alt="A cluster of woven pendant lights over a mural, with bougainvillea"
+                alt="Woven pendant lights over a mural in the dining area at Stories Brew Garden"
               />
             </div>
           </div>
@@ -91,15 +120,21 @@ export default function FoodAndDrinksPage() {
       <section className="band-dark dark">
         <div className="wrap">
           <p className="eyebrow">Something Good in Your Glass</p>
-          <h2>Drinks</h2>
+          <h2>Cocktails, Mocktails &amp; Craft Beer</h2>
           <ul className="reasons">
             <li>
               <h3>Crafted Beers</h3>
-              <p>Refreshing pours made for easy afternoons and lively evenings.</p>
+              <p>
+                Eight crafted beers and ciders, made for easy afternoons and
+                lively evenings.
+              </p>
             </li>
             <li>
               <h3>Signature Cocktails</h3>
-              <p>Cocktails with personality and a Stories touch.</p>
+              <p>
+                Stories Signature Cocktails, with personality and a Stories touch,
+                poured at the rooftop bar.
+              </p>
             </li>
             <li>
               <h3>Classics, Spirits, Mocktails &amp; Refreshers</h3>
@@ -119,6 +154,23 @@ export default function FoodAndDrinksPage() {
             allergies or dietary restrictions should inform the service team before
             ordering.
           </p>
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap">
+          <p className="eyebrow">Before You Order</p>
+          <h2>
+            Lunch, Dinner &amp;
+            <br />
+            Everything Between
+          </h2>
+          <Faq items={FAQS} />
+          <div className="btn-row">
+            <a className="btn" href={RESERVEGO_URL} target="_blank" rel="noopener">
+              Book a Table
+            </a>
+          </div>
         </div>
       </section>
     </main>

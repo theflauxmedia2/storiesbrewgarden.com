@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 
+const TITLE = "Our Story | Stories Brew Garden, Yelahanka, Bengaluru";
 const DESCRIPTION =
-  "From the house of Stories: Stories Brewery & Kitchen, Macaw, MOAI, Fernway and Stories Lounge. Founded by Nerall Bakhai, now in Yelahanka.";
+  "From the house of Stories: Stories Brewery & Kitchen, Macaw, MOAI, Fernway and Stories Lounge. Founded by Nerall Bakhai, now a rooftop bar & kitchen in Yelahanka.";
 
 export const metadata: Metadata = {
-  title: "Our Story | Stories Brew Garden, Yelahanka",
+  title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/our-story" },
   openGraph: {
-    title: "Our Story | Stories Brew Garden, Yelahanka",
+    title: TITLE,
     description: DESCRIPTION,
     url: "/our-story",
   },
@@ -20,12 +21,12 @@ export default function OurStoryPage() {
       <div className="hero">
         <div className="sun" aria-hidden="true" />
         <div className="wrap">
-          <p className="eyebrow rise">Our Story</p>
-          <h1 className="rise">
+          <h1 className="eyebrow rise">Our Story: Stories Brew Garden, Yelahanka</h1>
+          <p className="display rise">
             Every Place
             <br />
             Has a Story
-          </h1>
+          </p>
           <p className="lede rise">
             This one unfolds through people, romantic moments and changing skies.
             Stories Brew Garden was created around a simple idea: the best
@@ -62,7 +63,8 @@ export default function OurStoryPage() {
               <p>
                 Over time, that philosophy travelled into different formats,
                 cities and experiences. Today, that journey finds its newest
-                address in Yelahanka.
+                address in Avalahalli, Yelahanka, as a rooftop brew garden for
+                North Bengaluru.
               </p>
             </div>
             <div className="shot tall">
@@ -72,7 +74,7 @@ export default function OurStoryPage() {
                 height={453}
                 loading="lazy"
                 decoding="async"
-                alt="The lounge seating area with upholstered chairs and cane columns"
+                alt="The lounge at Stories Brew Garden, Yelahanka, with upholstered chairs and cane columns"
               />
             </div>
           </div>
@@ -116,7 +118,7 @@ export default function OurStoryPage() {
                 height={453}
                 loading="lazy"
                 decoding="async"
-                alt="High tables on the open rooftop terrace with the skyline behind at dusk"
+                alt="High tables on the open-air rooftop terrace at Stories Brew Garden, with the skyline behind at dusk"
               />
             </div>
           </div>

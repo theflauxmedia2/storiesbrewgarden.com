@@ -57,7 +57,7 @@ export const POURS = [
     imgFull: "/photos/beers/belgian-wit-full.webp",
     name: "Belgian Wit",
     style: "Belgian Witbier",
-    note: "Traditional Belgian wheat with orange peel and coriander. Citrusy and spiced.",
+    note: "Traditional Belgian wheat beer with orange peel and coriander. Citrusy and spiced.",
     abv: "5.0%",
     ibu: "12",
   },
